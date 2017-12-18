@@ -16,7 +16,7 @@ module.exports = function (sequelize, DataTypes) {
             foreignKeyConstraint: true,
             foreignKey: 'Sub_id'
         });
-        models.Plan.hasOne(models.Plan, {
+        models.Plan.belongsTo(models.Plan, {
             foreignKeyConstraint: true,
             foreignKey: 'Pre_req_id',
             as: "Subject"
